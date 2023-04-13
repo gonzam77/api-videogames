@@ -8,6 +8,7 @@ const getVideogamesApi = async () => {
     let page = 1;
     console.log("Bucando juegos...");
     while (page < 6) {
+        // const response = await axios(`http://localhoist:3001/videogames/key=${API_KEY}&page=${page}`)
         const response = await axios(`https://api.rawg.io/api/games?key=${API_KEY}&page=${page}`)
         const data = response.data.results;
         const videogamesByPage = data.map(game => {

@@ -25,6 +25,7 @@ const getVideogameByName = async (name) => {
     //console.log("Searching in API...");
 
     try {
+        // const response = await axios(`http://localhost:3001/videogames/search=${name}&key=${API_KEY}`);
         const response = await axios(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}`);
         const videogamesApi = [];
         for (let i = 0; i < 15; i++) {
