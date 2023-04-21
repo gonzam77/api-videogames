@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 const cors = require("cors");
-const getGenres = require("./controllers/getGenres");
 
 require('./db.js');
 
