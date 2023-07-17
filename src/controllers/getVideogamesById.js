@@ -4,8 +4,8 @@ const axios = require("axios");
 
 const getVideogameById = async (id) => {
 
-    let response = await axios(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`);
-    // let response = await axios(`http://localhost:3001/videogames/${id}?key=${API_KEY}`);
+    //let response = await axios(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`);
+     let response = await axios(`http://localhost:3001/videogames/${id}?key=${API_KEY}`);
     const data = response.data
     const platforms = data.platforms.map(obj => obj.platform.name);
     const genres = data.genres.map(genre => genre.name);
